@@ -12,3 +12,12 @@ public class RunMatrix {
       } while(sizeOfMatrix<=0);
     }
 }
+
+public static void printMatrix(int[][] matrix) {
+  for(int[] row : matrix){
+    for(int[] value : row){
+      System.out.print(value+"\t");
+    }
+    System.out.Println();
+  }
+}
