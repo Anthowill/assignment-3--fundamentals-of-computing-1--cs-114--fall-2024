@@ -14,11 +14,13 @@ public class Matrix {
   //to print matrix with color yellow diagonal
   public static void printMatrixWithHighlight(int[][] matrix){
     int sizeOfMatrix = matrix.length;
+    final String YELLOW = "\033[33m";
+    final String RESET = "\033[0m";
 
     for (int row = 0; row < sizeOfMatrix; row++) {
       for (int colm = 0; colm < sizeOfMatrix; colm++) {
         if (row + colm == sizeOfMatrix - 1) {
-          System.out.print("\033[33m" + matrix[row][colm] + "\033[0m");
+          System.out.print(YELLOW + matrix[row][colm] + RESET + "\t");
         }
         else {
           System.out.print(matrix[row][colm] + "\t");
